@@ -67,10 +67,10 @@ jobs:
         
       - name: Create Zip File
         run: |
-            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86.exe -DestinationPath .\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86-with-dokan.zip
-            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86.msi -DestinationPath .\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86-no-dokan.zip
-            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64.exe -DestinationPath .\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64-with-dokan.zip
-            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64.msi -DestinationPath .\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64-no-dokan.zip
+            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86.exe -DestinationPath .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86-with-dokan.zip
+            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86.msi -DestinationPath .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x86-no-dokan.zip
+            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64.exe -DestinationPath .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64-with-dokan.zip
+            Compress-Archive -Path .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64.msi -DestinationPath .\PersonalCloudSetup\PersonalCloud-${{ steps.get-version-string.outputs.replaced }}-x64-no-dokan.zip
 
       - name: Upload Setup (32-bit EXE)
         uses: actions/upload-release-asset@v1
